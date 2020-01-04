@@ -6,25 +6,35 @@ COLORS:
 */
 
 
-/* ------------------------------------------ Start Global Css ------------------------------------------ */
+/* ------------------------------------------ Start Root Css ------------------------------------------ */
 
-* {
+
+/* Unvirsal Selector that select eache element in the body */
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 
-/* ------------------------------------------ End Global Css ------------------------------------------ */
+/* ------------------------------------------ End Root Css ------------------------------------------ */
 
 
 /* ------------------------------------------ Start Key Frams ------------------------------------------ */
@@ -33,19 +43,19 @@ body {
     /* Animation Start  */
     0% {
         opacity: 0;
-        transform: translateX(100px);
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
     }
     /* 80% of Animation */
     80% {
-        transform: translateX(-20px);
-        -webkit-transform: translateX(-20px);
-        -moz-transform: translateX(-20px);
-        -ms-transform: translateX(-20px);
-        -o-transform: translateX(-20px);
+        transform: translateX(-2rem);
+        -webkit-transform: translateX(-2rem);
+        -moz-transform: translateX(-2rem);
+        -ms-transform: translateX(-2rem);
+        -o-transform: translateX(-2rem);
     }
     /* Animation Ends  */
     100% {
@@ -62,19 +72,19 @@ body {
     /* Animation Start  */
     0% {
         opacity: 0;
-        transform: translateX(-100px);
-        -webkit-transform: translateX(-100px);
-        -moz-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-        -o-transform: translateX(-100px);
+        transform: translateX(-10rem);
+        -webkit-transform: translateX(-10rem);
+        -moz-transform: translateX(-10rem);
+        -ms-transform: translateX(-10rem);
+        -o-transform: translateX(-10rem);
     }
     /* 80% of Animation */
     80% {
-        transform: translateX(20px);
-        -webkit-transform: translateX(20px);
-        -moz-transform: translateX(20px);
-        -ms-transform: translateX(20px);
-        -o-transform: translateX(20px);
+        transform: translateX(2rem);
+        -webkit-transform: translateX(2rem);
+        -moz-transform: translateX(2rem);
+        -ms-transform: translateX(2rem);
+        -o-transform: translateX(2rem);
     }
     /* Animation Ends  */
     100% {
@@ -91,19 +101,19 @@ body {
     /* Animation Start  */
     0% {
         opacity: 0;
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);
-        -moz-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-        -o-transform: translateY(50px);
+        transform: translateY(5rem);
+        -webkit-transform: translateY(5rem);
+        -moz-transform: translateY(5rem);
+        -ms-transform: translateY(5rem);
+        -o-transform: translateY(5rem);
     }
     /* 80% of Animation */
     80% {
-        transform: translateY(-20px);
-        -webkit-transform: translateY(-20px);
-        -moz-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        -o-transform: translateY(-20px);
+        transform: translateY(-2rem);
+        -webkit-transform: translateY(-2rem);
+        -moz-transform: translateY(-2rem);
+        -ms-transform: translateY(-2rem);
+        -o-transform: translateY(-2rem);
     }
     /* Animation Ends  */
     100% {
@@ -133,12 +143,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -155,7 +165,7 @@ body {
 
 .heading-primary {
     color: #ffffff;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
     text-transform: uppercase;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -163,9 +173,9 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     /* Animation Section */
     animation-name: moveInLeft;
     /* Animation Duration is how much time it takes to finish the animation*/
@@ -180,9 +190,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in-out;
     -webkit-animation: moveInRight 1s ease-in-out;
 }
@@ -196,36 +206,36 @@ body {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
     /*TransitionPropteyhandelsifyouhaveanymovemoentlikehover,active->etc*/
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
 }
 
 .btn:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-.3rem);
+    -webkit-transform: translateY(-.3rem);
+    -moz-transform: translateY(-.3rem);
+    -ms-transform: translateY(-.3rem);
+    -o-transform: translateY(-.3rem);
 }
 
 .btn:active {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-1px);
-    -webkit-transform: translateY(-1px);
-    -moz-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    -o-transform: translateY(-1px);
+    box-shadow: 0 .5rem .1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-.1rem);
+    -webkit-transform: translateY(-.1rem);
+    -moz-transform: translateY(-.1rem);
+    -ms-transform: translateY(-.1rem);
+    -o-transform: translateY(-.1rem);
 }
 
 .btn-white {
@@ -242,16 +252,16 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
 }
 
 .btn-white::after {
