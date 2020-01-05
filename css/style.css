@@ -30,6 +30,7 @@ body {
     line-height: 1.7;
     color: #777777;
     padding: 3rem;
+    /* box-sizing is for css calculation the box-sizing here for the height and the width will be defined for whole box including padding and border */
     box-sizing: border-box;
 }
 
@@ -141,17 +142,17 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -171,7 +172,7 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -188,7 +189,7 @@ body {
     /* animation-iteration-count: 3; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -238,7 +239,7 @@ body {
     -o-transform: translateY(-.1rem);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -277,7 +278,7 @@ body {
     -o-transform: scaleX(1.4) scaleY(1.6);
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom 1s ease-out 0.75s;
     -webkit-animation: moveInBottom 1s ease-out 0.75s;
     /* The fill-mode her work is to apply the style 'css' in 0% of the keyframe to the class before the animation start  */
