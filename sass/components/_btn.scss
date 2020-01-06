@@ -1,0 +1,79 @@
+.btn {
+    /* This " :link " sudo class in css is special state in selector */
+    &:link,
+    &:visited {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        /*Transition Proptey handels if you have any movemoent like hover, active->etc */
+        transition: all.2s;
+        -webkit-transition: all.2s;
+        -moz-transition: all.2s;
+        -ms-transition: all.2s;
+        -o-transition: all.2s;
+    }
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-0.3rem);
+        -webkit-transform: translateY(-0.3rem);
+        -moz-transform: translateY(-0.3rem);
+        -ms-transform: translateY(-0.3rem);
+        -o-transform: translateY(-0.3rem);
+        &::after {
+            opacity: 0;
+            transform: scaleX(1.4) scaleY(1.6);
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+            -moz-transform: scaleX(1.4) scaleY(1.6);
+            -ms-transform: scaleX(1.4) scaleY(1.6);
+            -o-transform: scaleX(1.4) scaleY(1.6);
+        }
+    }
+    &:active {
+        box-shadow: 0 0.5rem 0.1rem rgba($color-black, 0.2);
+        transform: translateY(-0.1rem);
+        -webkit-transform: translateY(-0.1rem);
+        -moz-transform: translateY(-0.1rem);
+        -ms-transform: translateY(-0.1rem);
+        -o-transform: translateY(-0.1rem);
+    }
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+    &--animated {
+        animation: moveInBottom 1s ease-out 0.75s;
+        -webkit-animation: moveInBottom 1s ease-out 0.75s;
+        /* The fill-mode her work is to apply the style 'css' in 0% of the keyframe to the class before the animation start  */
+        animation-fill-mode: backwards;
+    }
+}

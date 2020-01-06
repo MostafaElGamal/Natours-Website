@@ -1,0 +1,30 @@
+/* ------------------------------------------ Start Base Css ------------------------------------------ */
+
+
+/* Unvirsal Selector that select eache element in the body */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-gray-dark;
+    padding: 3rem;
+    /* box-sizing is for css calculation the box-sizing here for the height and the width will be defined for whole box including padding and border */
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------ End Base Css ------------------------------------------ */

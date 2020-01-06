@@ -1,178 +1,108 @@
-/*
-COLORS:
-    Light green: #7ed56f
-    Medium green: #55c57a
-    Dark green: #28b485
-*/
-
-
-/* ------------------------------------------ Start Root Css ------------------------------------------ */
-
-
+/* ------------------------------------------ Start Base Css ------------------------------------------ */
 /* Unvirsal Selector that select eache element in the body */
-
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: #777777;
-    padding: 3rem;
-    /* box-sizing is for css calculation the box-sizing here for the height and the width will be defined for whole box including padding and border */
-    box-sizing: border-box;
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777777;
+  padding: 3rem;
+  /* box-sizing is for css calculation the box-sizing here for the height and the width will be defined for whole box including padding and border */
+  box-sizing: border-box; }
 
-
-/* ------------------------------------------ End Root Css ------------------------------------------ */
-
-
-/* ------------------------------------------ Start Key Frams ------------------------------------------ */
-
+/* ------------------------------------------ End Base Css ------------------------------------------ */
 @keyframes moveInRight {
-    /* Animation Start  */
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-        -webkit-transform: translateX(10rem);
-        -moz-transform: translateX(10rem);
-        -ms-transform: translateX(10rem);
-        -o-transform: translateX(10rem);
-    }
-    /* 80% of Animation */
-    80% {
-        transform: translateX(-2rem);
-        -webkit-transform: translateX(-2rem);
-        -moz-transform: translateX(-2rem);
-        -ms-transform: translateX(-2rem);
-        -o-transform: translateX(-2rem);
-    }
-    /* Animation Ends  */
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-}
+  /* Animation Start  */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    -webkit-transform: translateX(10rem);
+    -moz-transform: translateX(10rem);
+    -ms-transform: translateX(10rem);
+    -o-transform: translateX(10rem); }
+  /* 80% of Animation */
+  80% {
+    transform: translateX(-2rem);
+    -webkit-transform: translateX(-2rem);
+    -moz-transform: translateX(-2rem);
+    -ms-transform: translateX(-2rem);
+    -o-transform: translateX(-2rem); }
+  /* Animation Ends  */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0); } }
 
 @keyframes moveInLeft {
-    /* Animation Start  */
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-        -webkit-transform: translateX(-10rem);
-        -moz-transform: translateX(-10rem);
-        -ms-transform: translateX(-10rem);
-        -o-transform: translateX(-10rem);
-    }
-    /* 80% of Animation */
-    80% {
-        transform: translateX(2rem);
-        -webkit-transform: translateX(2rem);
-        -moz-transform: translateX(2rem);
-        -ms-transform: translateX(2rem);
-        -o-transform: translateX(2rem);
-    }
-    /* Animation Ends  */
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-}
+  /* Animation Start  */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem); }
+  /* 80% of Animation */
+  80% {
+    transform: translateX(2rem);
+    -webkit-transform: translateX(2rem);
+    -moz-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    -o-transform: translateX(2rem); }
+  /* Animation Ends  */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0); } }
 
 @keyframes moveInBottom {
-    /* Animation Start  */
-    0% {
-        opacity: 0;
-        transform: translateY(5rem);
-        -webkit-transform: translateY(5rem);
-        -moz-transform: translateY(5rem);
-        -ms-transform: translateY(5rem);
-        -o-transform: translateY(5rem);
-    }
-    /* 80% of Animation */
-    80% {
-        transform: translateY(-2rem);
-        -webkit-transform: translateY(-2rem);
-        -moz-transform: translateY(-2rem);
-        -ms-transform: translateY(-2rem);
-        -o-transform: translateY(-2rem);
-    }
-    /* Animation Ends  */
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-    }
-}
-
-
-/*------------------------------------------ End Key Framse ------------------------------------------*/
-
-
-/* ---------------------------- Start Header Section -------------------------------------- */
-
-.header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, #7ed56fb4, #28b485b2), url('../img/hero.jpg');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    position: relative;
-}
-
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 3.5rem;
-}
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
+  /* Animation Start  */
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+    -moz-transform: translateY(5rem);
+    -ms-transform: translateY(5rem);
+    -o-transform: translateY(5rem); }
+  /* 80% of Animation */
+  80% {
+    transform: translateY(-2rem);
+    -webkit-transform: translateY(-2rem);
+    -moz-transform: translateY(-2rem);
+    -ms-transform: translateY(-2rem);
+    -o-transform: translateY(-2rem); }
+  /* Animation Ends  */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
 
 .heading-primary {
-    color: #ffffff;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.heading-primary--main {
+  color: #ffffff;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -186,23 +116,18 @@ body {
     /* Animetion Delay is wait 1s and then start the animation */
     /* animation-delay: 1s; */
     /* Animetion iteration count is how many times the animation will loop */
-    /* animation-iteration-count: 3; */
-}
-
-.heading-primary--sub {
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in-out;
-    -webkit-animation: moveInRight 1s ease-in-out;
-}
+    -webkit-animation: moveInRight 1s ease-in-out; }
 
-
-/* This " :link " sudo class in css is special state in selector */
-
-.btn:link,
-.btn:visited {
+.btn {
+  /* This " :link " sudo class in css is special state in selector */ }
+  .btn:link, .btn:visited {
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -213,38 +138,39 @@ body {
     -moz-border-radius: 10rem;
     -ms-border-radius: 10rem;
     -o-border-radius: 10rem;
-    /*TransitionPropteyhandelsifyouhaveanymovemoentlikehover,active->etc*/
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-}
-
-.btn:hover {
+    /*Transition Proptey handels if you have any movemoent like hover, active->etc */
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s; }
+  .btn:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-.3rem);
-    -webkit-transform: translateY(-.3rem);
-    -moz-transform: translateY(-.3rem);
-    -ms-transform: translateY(-.3rem);
-    -o-transform: translateY(-.3rem);
-}
-
-.btn:active {
-    box-shadow: 0 .5rem .1rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-.1rem);
-    -webkit-transform: translateY(-.1rem);
-    -moz-transform: translateY(-.1rem);
-    -ms-transform: translateY(-.1rem);
-    -o-transform: translateY(-.1rem);
-}
-
-.btn--white {
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after {
+    transform: translateY(-0.3rem);
+    -webkit-transform: translateY(-0.3rem);
+    -moz-transform: translateY(-0.3rem);
+    -ms-transform: translateY(-0.3rem);
+    -o-transform: translateY(-0.3rem); }
+    .btn:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      -moz-transform: scaleX(1.4) scaleY(1.6);
+      -ms-transform: scaleX(1.4) scaleY(1.6);
+      -o-transform: scaleX(1.4) scaleY(1.6); }
+  .btn:active {
+    box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.1rem);
+    -webkit-transform: translateY(-0.1rem);
+    -moz-transform: translateY(-0.1rem);
+    -ms-transform: translateY(-0.1rem);
+    -o-transform: translateY(-0.1rem); }
+  .btn--white {
+    background-color: #ffffff;
+    color: #777777; }
+    .btn--white::after {
+      background-color: #ffffff; }
+  .btn::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -258,32 +184,66 @@ body {
     -moz-border-radius: 10rem;
     -ms-border-radius: 10rem;
     -o-border-radius: 10rem;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;
-}
-
-.btn-white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    opacity: 0;
-    transform: scaleX(1.4) scaleY(1.6);
-    -webkit-transform: scaleX(1.4) scaleY(1.6);
-    -moz-transform: scaleX(1.4) scaleY(1.6);
-    -ms-transform: scaleX(1.4) scaleY(1.6);
-    -o-transform: scaleX(1.4) scaleY(1.6);
-}
-
-.btn--animated {
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s; }
+  .btn--animated {
     animation: moveInBottom 1s ease-out 0.75s;
     -webkit-animation: moveInBottom 1s ease-out 0.75s;
     /* The fill-mode her work is to apply the style 'css' in 0% of the keyframe to the class before the animation start  */
-    animation-fill-mode: backwards;
-}
+    animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  background-color: #777777;
+  color: black;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    background-color: orange;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem)/ 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem)/ 4) + 2 * 6rem); }
 
-/* ---------------------------- End Header Section -------------------------------------- */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }

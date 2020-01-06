@@ -1,0 +1,31 @@
+.heading-primary {
+    color: $color-white;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        /* Animation Section */
+        animation-name: moveInLeft;
+        /* Animation Duration is how much time it takes to finish the animation*/
+        animation-duration: 1s;
+        /* with ease-out the animation will start faster then slower */
+        animation-timing-function: ease-in-out;
+        /* Animetion Delay is wait 1s and then start the animation */
+        /* animation-delay: 1s; */
+        /* Animetion iteration count is how many times the animation will loop */
+        /* animation-iteration-count: 3; */
+    }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-in-out;
+        -webkit-animation: moveInRight 1s ease-in-out;
+    }
+}
