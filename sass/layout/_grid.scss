@@ -1,7 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #777777;
-    color: black;
     margin: 0 auto;
     @include clearFix;
     // What not dose is to apply the direction on every child except the last one in our case 
@@ -9,7 +7,6 @@
         margin-bottom: $gutter-veritcal;
     }
     [class^="col-"] {
-        background-color: orange;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
