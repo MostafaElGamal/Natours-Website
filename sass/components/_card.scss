@@ -18,11 +18,11 @@
         -moz-transition: all .8s ease;
         -ms-transition: all .8s ease;
         -o-transition: all .8s ease;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
+        border-radius: $border-radius-small;
+        -webkit-border-radius: $border-radius-small;
+        -moz-border-radius: $border-radius-small;
+        -ms-border-radius: $border-radius-small;
+        -o-border-radius: $border-radius-small;
         overflow: hidden;
         &--front {
             background-color: white;

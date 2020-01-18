@@ -1,5 +1,6 @@
 .btn {
     /* This " :link " sudo class in css is special state in selector */
+    &,
     &:link,
     &:visited {
         font-size: $default-font-size;
@@ -19,6 +20,9 @@
         -moz-transition: all.2s;
         -ms-transition: all.2s;
         -o-transition: all.2s;
+        // Change for the <button> element
+        border: none;
+        cursor: pointer;
     }
     &:hover {
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -36,7 +40,8 @@
             -o-transform: scaleX(1.4) scaleY(1.6);
         }
     }
-    &:active {
+    &:active,
+    &:focus {
         box-shadow: 0 0.5rem 0.1rem rgba($color-black, 0.2);
         transform: translateY(-0.1rem);
         -webkit-transform: translateY(-0.1rem);
