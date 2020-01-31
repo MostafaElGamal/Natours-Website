@@ -17,9 +17,10 @@
     },
     "homepage": "https://github.com/MostafaElGamal/Natours-Website#readme",
     "devDependencies": {
-        "node-sass": "^4.13.0"
+        "node-sass": "^4.13.1"
     },
     "dependencies": {
-        "jquery": "^3.4.1"
+        "jquery": "^3.4.1",
+        "live-server": "^1.2.1"
     }
 }

@@ -3,6 +3,7 @@
         display: none;
     }
     &__button {
+        cursor: pointer;
         background-color: $color-white;
         z-index: 2000;
         height: 7rem;
@@ -10,11 +11,21 @@
         position: fixed;
         top: 6rem;
         right: 6rem;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
     &__background {
         position: fixed;
@@ -23,30 +34,44 @@
         height: 6rem;
         width: 6rem;
         // radial-gradient like liner-gradient but it makes the color or the image circle around the element
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        background-image: radial-gradient( $color-primary-light, $color-primary-dark);
         z-index: 1000;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-        transform: scale(50);
-        -webkit-transform: scale(50);
-        -moz-transform: scale(50);
-        -ms-transform: scale(50);
-        -o-transform: scale(50);
-        -webkit-transform: scale(50);
+        transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        -moz-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        -ms-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        -o-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
     &__nav {
         height: 100vh;
-        width: 100%;
+        width: 0;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -moz-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -ms-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
     &__list {
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         list-style: none;
@@ -70,13 +95,13 @@
             color: $color-white;
             text-decoration: none;
             text-transform: uppercase;
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-image: linear-gradient( 120deg, transparent 0%, transparent 50%, $color-white 50%);
             background-size: 230%;
-            transition: all .4s;
-            -webkit-transition: all .4s;
-            -moz-transition: all .4s;
-            -ms-transition: all .4s;
-            -o-transition: all .4s;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -ms-transition: all 0.4s;
+            -o-transition: all 0.4s;
             span {
                 margin-right: 1rem;
                 display: inline-block;
@@ -92,5 +117,73 @@
             -ms-transform: translateX(1rem);
             -o-transform: translateX(1rem);
         }
+    }
+    // Functionalty
+    &__checkbox:checked~&__background {
+        transform: scale(50);
+        -webkit-transform: scale(50);
+        -moz-transform: scale(50);
+        -ms-transform: scale(50);
+        -o-transform: scale(50);
+        -webkit-transform: scale(50);
+    }
+    &__checkbox:checked~&__nav {
+        opacity: 1;
+        width: 100%;
+    }
+    // ICONS
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-gray-dark-3;
+            display: inline-block;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
+        }
+        &::before {
+            top: -0.8rem;
+        }
+        &::after {
+            top: 0.8rem;
+        }
+    }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+    }
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
     }
 }

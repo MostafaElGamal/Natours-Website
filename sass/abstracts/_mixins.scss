@@ -5,3 +5,64 @@
         clear: both;
     }
 }
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANGER
+
+/*
+
+0 - 600px: Phone
+600 - 900px: Tablet protrait
+900 - 1200px: Tablet lancscape
+1200 - 1800px: is where our normal style applys
+1800px : Big desktop
+
+$break point arg choices;
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+Order: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        // 600px
+        @media (max-width: 37.5em) {
+            // @content this what is do is take all the proprety the included in the calling mixin and put it right here
+            @content;
+        }
+    }
+    @if $breakpoint==tab-port {
+        // 900px
+        @media (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if $breakpoint==tab-land {
+        // 1200px
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+    @if $breakpoint==big-desktop {
+        // 1800px
+        @media (min-width: 112.5em) {
+            @content;
+        }
+    }
+}
