@@ -2,8 +2,8 @@
     width: 75%;
     margin: 0 auto;
     backface-visibility: hidden;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .6);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
@@ -55,7 +55,7 @@
         height: 100%;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        transition: all .5s;
+        transition: all 0.5s;
         transform: translateX(-4rem) scale(1.4);
         -webkit-transform: translateX(-4rem) scale(1.4);
         -moz-transform: translateX(-4rem) scale(1.4);
@@ -90,11 +90,11 @@
         -moz-transform: translate(-50%, 20%);
         -ms-transform: translate(-50%, 20%);
         -o-transform: translate(-50%, 20%);
-        transition: all .5s;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -ms-transition: all .5s;
-        -o-transition: all .5s;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
     }

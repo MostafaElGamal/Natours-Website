@@ -9,7 +9,7 @@
         font-size: 1.5rem;
         padding: 1.5rem 2rem;
         font-family: inherit;
-        background-color: rgba($color-white, .5);
+        background-color: rgba($color-white, 0.5);
         border: none;
         border-bottom: 3px solid transparent;
         border-radius: 2px;
@@ -17,17 +17,17 @@
         -moz-border-radius: 2px;
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
-        transition: all .3s;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        -ms-transition: all .3s;
-        -o-transition: all .3s;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
         @include respond(tab-port) {
             width: 100%;
         }
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
             border-bottom: 3px solid $color-primary;
         }
         &:focus:invalid {
@@ -41,13 +41,13 @@
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
-        margin-top: .7rem;
+        margin-top: 0.7rem;
         display: block;
-        transition: all .3s;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        -ms-transition: all .3s;
-        -o-transition: all .3s;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
     }
     &__input:placeholder-shown+&__label {
         opacity: 0;
@@ -82,7 +82,7 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        top: -.4rem;
+        top: -0.4rem;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -108,11 +108,11 @@
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
-            transition: all .2s;
-            -webkit-transition: all .2s;
-            -moz-transition: all .2s;
-            -ms-transition: all .2s;
-            -o-transition: all .2s;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
         }
     }
     &__radio-input:checked~&__radio-label &__radio-button::after {

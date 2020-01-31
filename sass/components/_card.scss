@@ -12,12 +12,12 @@
         top: 0;
         left: 0;
         height: 52rem;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-        transition: all .8s ease;
-        -webkit-transition: all .8s ease;
-        -moz-transition: all .8s ease;
-        -ms-transition: all .8s ease;
-        -o-transition: all .8s ease;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+        transition: all 0.8s ease;
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
         border-radius: $border-radius-small;
         -webkit-border-radius: $border-radius-small;
         -moz-border-radius: $border-radius-small;
@@ -34,13 +34,13 @@
             -ms-transform: rotateY(180deg);
             -o-transform: rotateY(180deg);
             &-1 {
-                background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+                background-image: linear-gradient( to right, $color-secondary-light, $color-secondary-dark);
             }
             &-2 {
-                background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+                background-image: linear-gradient( to right, $color-primary-light, $color-primary-dark);
             }
             &-3 {
-                background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+                background-image: linear-gradient( to right, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
@@ -68,13 +68,13 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+            background-image: linear-gradient( to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
         }
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+            background-image: linear-gradient( to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
         }
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+            background-image: linear-gradient( to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
         }
     }
     &__heading {
@@ -93,13 +93,13 @@
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
         &--1 {
-            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85), );
+            background-image: linear-gradient( to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
         }
         &--2 {
-            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85), );
+            background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
         }
         &--3 {
-            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85), );
+            background-image: linear-gradient( to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
         }
     }
     &__details {
@@ -143,9 +143,10 @@
         font-size: 6rem;
         font-weight: 100;
     }
-    @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+    only screen and(hover:none) {
         height: auto;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
         background-color: $color-white;
         border-radius: $border-radius-small;
         -webkit-border-radius: $border-radius-small;

@@ -38,5 +38,10 @@ body {
     }
 }
 
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
 
 /* ------------------------------------------ End Base Css ------------------------------------------ */
