@@ -9,7 +9,7 @@
         "compile:sass": "node-sass sass/main.scss css/style.comp.css",
         "concat:css": "concat -o css/style.concat.css css/iconFont.css css/style.comp.css",
         "compress:css": "node-sass css/style.comp.css css/style.css --output-style compressed",
-        "build:css": "npm-run-all compile:sass concat:css compress:css",
+        "build": "npm-run-all compile:sass concat:css compress:css",
         "dev": "npm-run-all --parallel sass devserver"
     },
     "repository": {
